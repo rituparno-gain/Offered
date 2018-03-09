@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "550553229525",
+    "firebase_url": "https://offered-4f742.firebaseio.com",
+    "project_id": "offered-4f742",
+    "storage_bucket": "offered-4f742.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550553229525:android:72a6cfd75c5db9f6",
+        "android_client_info": {
+          "package_name": "rigain.com.offered"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550553229525-soinco7u5fc6o1mi8fc3t1459nnhba5f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk7aruyMRSg1UXxn7UI8EAcwP0So2nNAc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
