@@ -50,12 +50,11 @@ public class SelectImageDialog extends DialogFragment {
         });
 
         TextView mTakePhoto = (TextView) view.findViewById(R.id.dialogOpenCamera);
-        mSelectPhoto.setOnClickListener(new View.OnClickListener() {
+        mTakePhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: using camera for photo");
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                intent.setType("image/*");
                 startActivityForResult(intent, CAMERA_REQUEST_CODE);
             }
         });
@@ -95,7 +94,7 @@ public class SelectImageDialog extends DialogFragment {
     @Override
     public void onAttach(Context context) {
         try{
-            mOnPhotoSelectedListener = (OnPhotoSelectedListener) getActivity();
+            mOnPhotoSelectedListener = (OnPhotoSelectedListener) getTargetFragment();
         }catch (ClassCastException e){
             Log.e(TAG, "onAttach: ClassCastException"+ e.getMessage());
         }

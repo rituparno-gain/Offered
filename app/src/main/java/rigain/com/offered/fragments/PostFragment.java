@@ -1,6 +1,8 @@
 package rigain.com.offered.fragments;
 
 
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -23,7 +25,7 @@ import rigain.com.offered.util.UniversalImageLoader;
  * Created by rigain on 3/9/2018.
  */
 
-public class PostFragment extends Fragment {
+public class PostFragment extends Fragment implements SelectImageDialog.OnPhotoSelectedListener{
 
     private static final String TAG = "PostFragment";
 
@@ -32,6 +34,10 @@ public class PostFragment extends Fragment {
     private EditText mTitle, mDescription, mPrice, mCountry, mStateProvince, mCity, mContactEmail;
     private Button mPost;
     private ProgressBar mProgressBar;
+
+    //vars
+    private Bitmap mSelectedBitmap;
+    private Uri mSelectedUri;
 
     @Nullable
     @Override
@@ -100,4 +106,21 @@ public class PostFragment extends Fragment {
         return string.equals("");
     }
 
+    @Override
+    public void getImagePath(Uri imagePath) {
+        Log.d(TAG, "getImagePath: setting the image to image view");
+        UniversalImageLoader.setImage(imagePath.toString(),mPostImage);
+        //assign to global variable
+        mSelectedBitmap = null;
+        mSelectedUri = imagePath;
+    }
+
+    @Override
+    public void getImageBitmap(Bitmap bitmap) {
+        Log.d(TAG, "getImageBitmap: setting image to image view");
+        mPostImage.setImageBitmap(bitmap);
+        //assign to global variable
+        mSelectedBitmap = bitmap;
+        mSelectedUri = null;
+    }
 }
