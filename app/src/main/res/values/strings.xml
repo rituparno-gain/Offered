@@ -11,6 +11,7 @@
 
     <!-- Database nodes -->
     <string name="node_users">users</string>
+    <string name="dialog_select_photo">Select Photo</string>
 
 
     <!-- Database field names -->
@@ -33,5 +34,5 @@
         sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
         like Aldus PageMaker including versions of Lorem Ipsum</string>
 
-    <string name="app_name">ForSale</string>
+    <string name="app_name">Offered!</string>
 </resources>
