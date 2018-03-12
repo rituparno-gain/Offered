@@ -5,6 +5,7 @@
     <string name="fragment_watchlist">Watchlist</string>
     <string name="fragment_post">Post</string>
     <string name="fragment_account">Account</string>
+    <string name="fragment_view_post">View Post</string>
 
     <!-- Dialog Names -->
     <string name="dialog_select_photo">Select Photo</string>
