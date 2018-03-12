@@ -7,6 +7,7 @@ import android.widget.ImageView;
 
 /**
  * Created by rigain on 3/12/2018.
+ *
  */
 
 public class SquareImageView extends android.support.v7.widget.AppCompatImageView {
